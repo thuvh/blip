@@ -14,7 +14,7 @@ $(BLIP):	build_id $(OBJS)
 	$(CC) $(OBJS) blip.c ${CFLAGS} -o $(BLIP)
 
 build_id:
-	echo "static char build_id[] = \"`date` by `whoami` in `pwd`\n\";" > build_id.h
+	echo "static char build_id[] = \"`date` by `whoami` in `pwd`\";" > build_id.h
 
 clean:
 	rm -f blip core *.o build_id.h
